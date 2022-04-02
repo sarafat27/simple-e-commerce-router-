@@ -1,6 +1,7 @@
 .t-shirt {
     height: 450px;
-    background-color: lightskyblue;
+    border: 2px solid gray;
+    border-radius: 10px;
 }
 
 .t-shirt img {
