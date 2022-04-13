@@ -1,6 +1,8 @@
 import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import './Cart.css'
 const Cart = ({ cart, removeFromCart }) => {
+    const navigate = useNavigate();
     //conditional rendering options
     //1.element variable
     //2.ternary operator.condition ? true : false
@@ -36,6 +38,9 @@ const Cart = ({ cart, removeFromCart }) => {
             {/* {cart.length !== 4 ? <p>keep adding</p> : <button>Clear all</button>} */}
             {cart.length < 4 ? "" : <button>Clear all</button>}
             {cart.length === 4 && <button className='blue'>Review order</button>}
+            <button onClick={() => navigate('/orderreview')}>
+                Order review
+            </button>
         </div>
     );
 };
